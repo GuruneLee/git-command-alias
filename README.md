@@ -1,6 +1,9 @@
 ## alias script
 ```
 [alias]
+	# lazy git
+  	lg = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	la = "! git l --all"
 	ru = remote -v update
